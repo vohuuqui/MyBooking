@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/nametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="50dp" />
+
+        <EditText
+            android:id="@+id/phonetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nametext"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="50dp" />
+
+        <CheckBox
+            android:id="@+id/checkVip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="VIP"
+            app:layout_constraintTop_toBottomOf="@+id/phonetext" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/seattext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Seat Types"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RadioGroup
+                android:id="@+id/seatchecktypes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <RadioButton
+                    android:id="@+id/seatcheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:text="Seat"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/beathcheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:text="Beath"
+                    android:textSize="15dp" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Spinner
+                android:id="@+id/currenciesspinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/myexitbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:textColor="#ff0000"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/mybutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/myexitbutton"
+            android:text="Book"
+            android:textColor="#0b0080"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mytext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#0b0080"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
